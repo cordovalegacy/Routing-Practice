@@ -1,38 +1,65 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#web-page-consolidation {
+  flex: 1;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#hello-wrapper, #blue-red-hello-wrapper, #number-wrapper, #home-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 1000px;
+}
+
+#hello-row, #blue-red-hello-row, #number-row, #home-row {
+  display: flex;
+  height: 200px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: large;
+  gap: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+#hello-information, #blue-red-hello-information, #number-information, #home-information {
+  display: flex;
+  font-size: larger;
+  flex-direction: column;
+  height: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#blue-red-hello-wrapper {
+  background-color: lightcoral;
+  color: blue;
+}
+
+input {
+  height: 30px;
+  color: blue;
+}
+
+button {
+  background-color: gainsboro;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  border: 1px solid gray;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 2px gray;
+  align-self: center;
+}
+
+button:hover {
+  background-color: aliceblue;
+  transition: 500ms;
+  color: darkcyan;
+}
+
+button:active {
+  background-color: darkslategrey;
+  color: whitesmoke;
 }
