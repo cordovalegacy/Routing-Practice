@@ -73,9 +73,18 @@ const Hello = (props) => {
 const BlueRedHello = (props) => {
 
     const [coloredWord, setColoredWord] = useState("Hello")
+    const [storedColoredWord, setStoredColoredWord] = useState([])
+
+    const coloredObj = [
+        {
+            coloredWord,
+            completed: false
+        }
+    ]
 
     const coloredWordHandler = (e) => {
         e.preventDefault();
+        setStoredColoredWord(...storedColoredWord, coloredObj)
         setColoredWord("Hello");
     }
 
